@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Developers",
+    "links": [
+      {
+        "text": "Documentation",
+        "url": "https://docs.onlylayer.com"
+      },
+      {
+        "text": "GitHub",
+        "url": "https://github.com/layeronly"
+      }
+    ]
+  },
+  {
+    "title": "Community",
+    "links": [
+      {
+        "text": "Onlylayer Website",
+        "url": "https://www.onlylayer.com/"
+      },
+      {
+        "text": "Twitter",
+        "url": "https://twitter.com/onlylayer"
+      },
+      {
+        "text": "Telegram",
+        "url": "https://t.me/onlylayer"
+      }
+    ]
+  }
+]
