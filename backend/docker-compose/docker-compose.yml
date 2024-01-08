@@ -89,3 +89,13 @@ services:
     extends:
       file: ./services/docker-compose-nginx.yml
       service: proxy
+      
+  certbot:
+    image: certbot/certbot
+    command: certonly --standalone -d onlyscan.info
+    volumes:
+      - ./certbot-data:/etc/letsencrypt
+      - ./certbot-logs:/var/log/letsencrypt
+    environment:
+      - CERTBOT_EMAIL=contact@onlylayer.com
+      - CERTBOT_AGREE_TERMS=true
