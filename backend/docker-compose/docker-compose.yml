@@ -80,15 +80,6 @@ services:
     extends:
       file: ./services/docker-compose-stats.yml
       service: stats
-
-  proxy:
-    depends_on:
-      - backend
-      - frontend
-      - stats
-    extends:
-      file: ./services/docker-compose-nginx.yml
-      service: proxy
       
   certbot:
     image: certbot/certbot
@@ -99,3 +90,14 @@ services:
     environment:
       - CERTBOT_EMAIL=contact@onlylayer.com
       - CERTBOT_AGREE_TERMS=true
+      
+  proxy:
+    depends_on:
+      - backend
+      - frontend
+      - stats
+      - certbot 
+    extends:
+      file: ./services/docker-compose-nginx.yml
+      service: proxy
+      
